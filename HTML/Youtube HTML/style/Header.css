@@ -1,0 +1,249 @@
+.themeButton:hover,
+.hamburger:hover,
+.logo:hover,
+.searchButton:hover,
+.voiceButton:hover,
+.createButton:hover,
+.notificationButton:hover,
+.profileButton:hover {
+    cursor: pointer;
+}
+
+.themeButton:hover,
+.hamburger:hover,
+.voiceButton:hover,
+.createButton:hover,
+.notificationButton:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 16px;
+    height: 56px;
+}
+
+.left {
+    display: flex;
+    width: 200px;
+    align-items: center;
+}
+
+.hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.logo{
+    height: 24px;
+    padding-block: 18px;
+    padding-left: 16px;
+    padding-right: 14px;
+    color: inherit;
+    opacity: light-dark(1, 0);
+}
+
+.darkLogo
+{
+    height: 24px;
+    padding-block: 18px;
+    padding-left: 16px;
+    padding-right: 14px;
+    position: absolute;
+    display: none;
+}
+
+.region {
+    position: relative;
+    top: -10px;
+    left: -10px;
+    font-size: small;
+    color:rgb(150, 150, 150);
+}
+
+.middle {
+    margin-left: 40px;
+    padding-inline: 4px;
+    display: flex;
+    flex: 0 1 732px;
+    align-items: center;
+    min-width: 0;
+}
+
+.searchbox {
+    display: flex;
+    padding-left: 16px;
+    padding-right: 4px;
+    padding-block: 0;
+    margin-left: 32px;
+    flex: 1;
+    min-width: 0;
+    border: 1px solid;
+    border-right: 0;
+    border-color: hsl(0, 0%, 18.82%);
+    border-radius: 40px 0 0 40px;
+    height: 38px;
+    background-color: inherit;
+    
+}
+.searchbox:focus {
+    border-color: red;
+}
+
+.searchbox::placeholder {
+    font-size: medium;
+}
+
+.searchButton {
+    min-width: 64px;
+    height: 40px;
+    border: 1px solid;
+    border-color: hsl(0, 0%, 18.82%);
+    border-radius: 0 40px 40px 0;
+    padding: 0;
+    background-color: var(--button-background-color);
+    color: inherit;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+
+.searchIcon {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+}
+
+.voiceButton {
+    margin-left: 12px;
+    border: 0px;
+    border-radius: 50%;
+    height: 40px;
+    background-color: var(--button-background-color);
+    color: inherit;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+} 
+
+.voiceIcon {
+    width: 24px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 225px;
+}
+
+.createButton {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    height: 36px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 97px;
+    justify-content: center;
+    border: 0;
+    background-color: var(--button-background-color);
+    color: inherit;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.createIcon {
+    margin-right: 6px;
+    margin-left: -6px;
+}
+
+.themeIcon {
+    width: 24px;
+    color: red;
+}
+
+.themeButton {
+    background-color: transparent;
+    color: white;
+    border: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 12px;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.notificationButton {
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.voiceButton,
+.notificationButton {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.notificationNumber {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-color: white;
+    align-items: center;
+    justify-content: center;
+}
+.profileButton {
+    display: flex;
+    align-items: center;
+    padding-block: 1px;
+    height: 34px;
+    width: 60px;
+    background-color: transparent;
+    border: 0;
+}
+
+.userProfileImage {
+    border-radius: 50%;
+    margin-inline: 8px;
+    height: 32px;
+}
+
+.header .tooltip{
+    position: absolute;
+    white-space: nowrap;
+    border-radius: 5px;
+    padding: 10px;
+    top: 56px;
+    color: white;
+    background-color: rgb(170, 170, 170);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.voiceButton:hover .tooltip,
+.notificationButton:hover .tooltip {
+    opacity: 1;
+} 

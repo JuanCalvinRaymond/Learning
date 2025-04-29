@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-mingw32-make"
+	BuildStamp="20250424-1906-Experimental"
+	Name="DESKTOP-43ICSLQ"
+	Generator="ctest-4.0.1"
+	CompilerName="C:/msys64/mingw64/bin/g++.exe"
+	CompilerVersion="13.1.0"
+	OSName="Windows"
+	Hostname="DESKTOP-43ICSLQ"
+	OSRelease=" Personal"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="7"
+	ModelName=""
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="24"
+	NumberOfPhysicalCPU="16"
+	TotalVirtualMemory="130813"
+	TotalPhysicalMemory="32509"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3187"
+	>
+	<Testing>
+		<StartDateTime>Apr 25 13:52 Eastern Daylight Time</StartDateTime>
+		<StartTestTime>1745603554</StartTestTime>
+		<TestList/>
+		<EndDateTime>Apr 25 13:52 Eastern Daylight Time</EndDateTime>
+		<EndTestTime>1745603554</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

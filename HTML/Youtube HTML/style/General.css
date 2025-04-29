@@ -1,0 +1,86 @@
+:root {
+    /* color-scheme: light dark; */
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, Arial;
+    color-scheme: light;
+    background-color: light-dark(white, #0f0f0f);
+    color: light-dark(black, white);
+    --button-background-color: light-dark(rgba(0, 0, 0, 0.05), rgb(40, 40, 40));
+    --button-background-hover-color: light-dark(rgba(0, 0, 0, 0.1), rgba(60, 60, 60));
+    --button-background-select-color: light-dark(rgba(15, 15, 15), rgba(196, 196, 196));
+    --button-select-color: light-dark(white, black);
+}
+
+.darkMode {
+    color-scheme: dark;
+}
+
+.verticalLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 260px;
+    margin-top: 56px;
+}
+.horizontalLayout {
+    display: flex;
+    justify-content:flex-start;
+    padding: 0;
+    padding-inline: 24px;
+}
+
+.horizontalLayout button {
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 13px;
+    margin-left: 0px;
+    border:0;
+    border-radius: 8px;
+    background-color: var(--button-background-color);
+    padding-inline: 15px;
+    height: 35px;
+    color: inherit;
+    white-space: nowrap;
+    touch-action: pan-y;
+    cursor: pointer;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.horizontalLayout button:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.horizontalLayout .buttonSelected {
+    color: var(--button-select-color);
+    background-color: var(--button-background-select-color);
+}
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 24px;
+    padding-inline: 16px;
+}
+.video {
+    margin-left: 8px;
+    margin-bottom: 32px;
+    margin-right: 8px;
+}
+
+@media (max-width: 1199px) {
+    .gridLayout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gridLayout {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+} 

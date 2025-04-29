@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/Thumbnail.css" />
+    <link rel="stylesheet" href="style/Header.css" />
+    <link rel="stylesheet" href="style/General.css" />
+    <link rel="stylesheet" href="style/Sidebar.css" />
+    <title>Youtube</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <div class="hamburger">
+
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          focusable="false"
+          aria-hidden="true"
+          style="
+          pointer-events: none;
+          display: inherit;
+          width: 24px;
+          height: 24px;
+          padding: 8px;
+          "
+          >
+          <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
+        </svg>
+      </div>
+      <img class="logo" src="resources/Youtube Logo.png" alt="Youtube Logo">
+      <img class="darkLogo" src="resources/Youtube Logo Dark.png" alt="Youtube Dark Logo">
+        <div class="region">CA</div>
+      </div>
+      <div class="middle">
+        <input class="searchbox" type="text" placeholder="Search" />
+        <button class="searchButton">
+          <div class="searchIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        </button>
+        <button class="voiceButton">
+          <div class="voiceIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z"
+              ></path>
+            </svg>
+          </div>
+          <div class="tooltip">Search with your voices</div>
+        </button>
+      </div>
+      <div class="right">
+        <button class="themeButton" onclick="toggleDarkMode()">
+          <div class="themeIcon">
+            <img src="resources/Light Dark Toggle.svg" alt="">
+          </div>
+        </button>
+        <button class="createButton">
+          <div class="createIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              enable-background="new 0 0 24 24"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path d="M20 12h-8v8h-1v-8H3v-1h8V3h1v8h8v1z"></path>
+            </svg>
+          </div>
+          Create
+        </button>
+        <button class="notificationButton">
+          <div class="notificationIcon">
+
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            focusable="false"
+            aria-hidden="true"
+            style="
+            pointer-events: none;
+            display: inherit;
+            width: 100%;
+            height: 100%;
+            "
+            >
+            <path
+            clip-rule="evenodd"
+            d="m13.497 4.898.053.8.694.4C15.596 6.878 16.5 8.334 16.5 10v2.892c0 .997.27 1.975.784 2.83L18.35 17.5H5.649l1.067-1.778c.513-.855.784-1.833.784-2.83V10c0-1.666.904-3.122 2.256-3.902l.694-.4.053-.8c.052-.78.703-1.398 1.497-1.398.794 0 1.445.618 1.497 1.398ZM6 10c0-2.224 1.21-4.165 3.007-5.201C9.11 3.236 10.41 2 12 2c1.59 0 2.89 1.236 2.993 2.799C16.79 5.835 18 7.776 18 10v2.892c0 .725.197 1.436.57 2.058l1.521 2.535c.4.667-.08 1.515-.857 1.515H15c0 .796-.316 1.559-.879 2.121-.562.563-1.325.879-2.121.879s-1.559-.316-2.121-.879C9.316 20.56 9 19.796 9 19H4.766c-.777 0-1.257-.848-.857-1.515L5.43 14.95c.373-.622.57-1.333.57-2.058V10Zm4.5 9c0 .398.158.78.44 1.06.28.282.662.44 1.06.44s.78-.158 1.06-.44c.282-.28.44-.662.44-1.06h-3Z"
+            fill-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+          <div class="notificationNumber">3</div>
+          <div class="tooltip">Notification</div>
+        </button>
+        <button class="profileButton">
+          <img
+            class="userProfileImage"
+            src="resources/fanazador_profile.jpg"
+            alt=""
+          />
+        </button>
+      </div>
+    </header>
+
+    <nav class="sidebar">
+      <div class="guideSection">
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4 4.5A1.5 1.5 0 015.5 3h13A1.5 1.5 0 0120 4.5H4Zm16.5 3h-17v11h17v-11ZM3.5 6A1.5 1.5 0 002 7.5v11A1.5 1.5 0 003.5 20h17a1.5 1.5 0 001.5-1.5v-11A1.5 1.5 0 0020.5 6h-17Zm7.257 4.454a.5.5 0 00-.757.43v4.233a.5.5 0 00.757.429L15 13l-4.243-2.546Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Subscription
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12 20.5c4.694 0 8.5-3.806 8.5-8.5S16.694 3.5 12 3.5 3.5 7.306 3.5 12s3.806 8.5 8.5 8.5Zm0 1.5c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm0-5c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5Zm0 1c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6Zm-1.243-8.546c-.333-.2-.757.04-.757.43v4.233c0 .389.424.629.757.429L15 12l-4.243-2.546Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Youtube Music
+        </button>
+        <div class="collapsibleSection">
+          <button class="headerButton">
+            <div class="headerText">You</div>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  d="M4.97 12.65 9.62 8 4.97 3.35l.71-.71L11.03 8l-5.35 5.35-.71-.7z"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <button>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M14.203 4.83c-1.74-.534-3.614-.418-5.274.327-1.354.608-2.49 1.6-3.273 2.843H8.25c.414 0 .75.336.75.75s-.336.75-.75.75H3V4.25c0-.414.336-.75.75-.75s.75.336.75.75v2.775c.935-1.41 2.254-2.536 3.815-3.236 1.992-.894 4.241-1.033 6.328-.392 2.088.641 3.87 2.02 5.017 3.878 1.146 1.858 1.578 4.07 1.215 6.223-.364 2.153-1.498 4.1-3.19 5.48-1.693 1.379-3.83 2.095-6.012 2.016-2.182-.08-4.26-.949-5.849-2.447-1.588-1.499-2.578-3.523-2.784-5.697-.039-.412.264-.778.676-.817.412-.04.778.263.818.675.171 1.812.996 3.499 2.32 4.748 1.323 1.248 3.055 1.973 4.874 2.04 1.818.065 3.598-.532 5.01-1.681 1.41-1.15 2.355-2.773 2.657-4.567.303-1.794-.056-3.637-1.012-5.186-.955-1.548-2.44-2.697-4.18-3.231ZM12.75 7.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75v4.886l.314.224 3.5 2.5c.337.241.806.163 1.046-.174.241-.337.163-.806-.174-1.046l-3.186-2.276V7.5Z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            History
+          </button>
+          <button>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M3.75 5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75S20.664 5 20.25 5H3.75Zm0 4c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75S20.664 9 20.25 9H3.75Zm0 4c-.414 0-.75.336-.75.75s.336.75.75.75h8.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-8.5Zm8.5 4c.414 0 .75.336.75.75s-.336.75-.75.75h-8.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h8.5Zm3.498-3.572c-.333-.191-.748.05-.748.434v6.276c0 .384.415.625.748.434L22 17l-6.252-3.572Z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Playlists
+          </button>
+          <button>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M3.5 5.5h17v13h-17v-13ZM2 5.5C2 4.672 2.672 4 3.5 4h17c.828 0 1.5.672 1.5 1.5v13c0 .828-.672 1.5-1.5 1.5h-17c-.828 0-1.5-.672-1.5-1.5v-13Zm7.748 2.927c-.333-.19-.748.05-.748.435v6.276c0 .384.415.625.748.434L16 12 9.748 8.427Z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Your videos
+          </button>
+          <button>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6 12c0-3.31 2.69-6 6-6s6 2.69 6 6c0 1.66-.67 3.16-1.77 4.25l-.71-.71C16.44 14.63 17 13.38 17 12c0-2.76-2.24-5-5-5s-5 2.24-5 5c0 1.38.56 2.63 1.47 3.54l-.71.71C6.67 15.16 6 13.66 6 12zm8 0c0-1.1-.9-2-2-2s-2 .9-2 2c0 .74.4 1.38 1 1.72V22h2v-8.28c.6-.34 1-.98 1-1.72zm-9.06 7.08.71-.71C4.01 16.74 3 14.49 3 12c0-4.96 4.04-9 9-9s9 4.04 9 9c0 2.49-1.01 4.74-2.65 6.37l.71.71C20.88 17.27 22 14.77 22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 2.77 1.12 5.27 2.94 7.08z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Your podcasts
+          </button>
+          <button>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M20.5 12c0 4.694-3.806 8.5-8.5 8.5S3.5 16.694 3.5 12 7.306 3.5 12 3.5s8.5 3.806 8.5 8.5Zm1.5 0c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10Zm-9.25-5c0-.414-.336-.75-.75-.75s-.75.336-.75.75v5.375l.3.225 4 3c.331.248.802.181 1.05-.15.248-.331.181-.801-.15-1.05l-3.7-2.775V7Z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Watch later
+          </button>
+          <button>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M14.813 5.018 14.41 6.5 14 8h5.192c.826 0 1.609.376 2.125 1.022.711.888.794 2.125.209 3.101L21 13l.165.413c.519 1.296.324 2.769-.514 3.885l-.151.202v.5c0 1.657-1.343 3-3 3H5c-1.105 0-2-.895-2-2v-8c0-1.105.895-2 2-2h2v.282c0-.834.26-1.647.745-2.325L12 1l1.1.472c1.376.59 2.107 2.103 1.713 3.546ZM7 10.5H5c-.276 0-.5.224-.5.5v8c0 .276.224.5.5.5h2v-9Zm10.5 9h-9V9.282c0-.521.163-1.03.466-1.453l3.553-4.975c.682.298 1.043 1.051.847 1.77l-.813 2.981c-.123.451-.029.934.255 1.305.284.372.725.59 1.192.59h5.192c.37 0 .722.169.954.459.32.399.357.954.094 1.393l-.526.876c-.241.402-.28.894-.107 1.33l.165.412c.324.81.203 1.73-.32 2.428l-.152.202c-.195.26-.3.575-.3.9v.5c0 .828-.672 1.5-1.5 1.5Z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Liked videos
+          </button>
+          <button>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.53 11.53c.293-.293.293-.767 0-1.06-.293-.293-.767-.293-1.06 0l-3.72 3.72V3c0-.414-.336-.75-.75-.75s-.75.336-.75.75v11.19l-3.72-3.72c-.293-.293-.767-.293-1.06 0-.293.293-.293.767 0 1.06l5 5 .53.53.53-.53 5-5Zm1.72 8.97c.414 0 .75-.336.75-.75s-.336-.75-.75-.75H4.75c-.414 0-.75.336-.75.75s.336.75.75.75h14.5Z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Downloads
+          </button>
+          <button>
+            <div class="sidebarIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+                style="
+                  pointer-events: none;
+                  display: inherit;
+                  width: 100%;
+                  height: 100%;
+                "
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="m8.042 9.456-.716.08c-.732.08-1.486-.16-2.043-.718-.977-.976-.977-2.559 0-3.535.976-.977 2.559-.977 3.535 0 .558.557.798 1.312.717 2.044l-.079.715.51.51 10.13 10.13c-.97.643-2.291.537-3.146-.318l-4.951-4.951-1.061 1.06 4.951 4.952c1.442 1.442 3.712 1.553 5.282.331.13-.1.255-.212.375-.331l.707-.707-1.06-1.061L15.534 12l5.657-5.657 1.06-1.06-.706-.708c-.12-.12-.245-.23-.376-.331-1.569-1.222-3.839-1.111-5.281.331L13.06 7.404l1.061 1.06 2.829-2.828c.855-.855 2.175-.961 3.146-.318l-4.56 4.56 1.06 1.061L15.536 12l-4.51-4.51c.128-1.164-.254-2.375-1.147-3.268-1.562-1.562-4.095-1.562-5.657 0-1.562 1.562-1.562 4.095 0 5.657.893.893 2.104 1.276 3.269 1.147l2.033 2.033 1.06-1.06-2.033-2.033-.509-.51Zm-.285-3.113c-.39-.39-1.023-.39-1.414 0-.39.39-.39 1.024 0 1.415.39.39 1.024.39 1.414 0 .39-.391.39-1.024 0-1.415Zm-.43 8.122.715.079.51-.51.973-.973L8.465 12l-.975.974c-1.165-.128-2.375.254-3.268 1.147-1.562 1.562-1.562 4.095 0 5.657 1.562 1.562 4.094 1.562 5.657 0 .893-.893 1.275-2.104 1.147-3.269l.974-.973-1.06-1.061-.975.974-.509.509.079.716c.08.732-.16 1.486-.717 2.044-.976.976-2.56.976-3.536 0-.976-.977-.976-2.56 0-3.536.558-.558 1.312-.798 2.044-.717Zm-.984 3.192c.39.39 1.024.39 1.414 0 .39-.39.39-1.024 0-1.414-.39-.39-1.023-.39-1.414 0-.39.39-.39 1.023 0 1.414Z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            Your clips
+          </button>
+        </div>
+      </div>
+      <div class="subscription">
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+        <button>
+          <div class="sidebarIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              focusable="false"
+              aria-hidden="true"
+              style="
+                pointer-events: none;
+                display: inherit;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <path
+                clip-rule="evenodd"
+                d="M22.146 11.146a.5.5 0 01-.353.854H20v7.5a1.5 1.5 0 01-1.5 1.5h-5v-7h-3v7h-5A1.5 1.5 0 014 19.5V12H2.207a.5.5 0 01-.353-.854L12 1l10.146 10.146ZM18.5 9.621l-6.5-6.5-6.5 6.5V19.5H9V13a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v6.5h3.5V9.621Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          Home
+        </button>
+      </div>
+    </nav>
+    <main class="verticalLayout">
+      <section class="horizontalLayout">
+        <button class="buttonSelected">
+          All
+        </button>
+        <button>
+          Gaming
+        </button>
+        <button>
+          Podcasts
+        </button>
+        <button>
+          Music
+        </button>
+        <button>
+          Computer programming
+        </button>
+        <button>
+          Live
+        </button>
+        <button>
+          News
+        </button>
+        <button>
+          Audio Commentaries
+        </button>
+        <button>
+          Mixes
+        </button>
+        <button>
+          Final Fantasy XIV
+        </button>
+        <button>
+          Warcraft
+        </button>
+        <button>
+          Esports
+        </button>
+        <button>
+          Canada
+        </button>
+        <button>
+          JROCK
+        </button>
+        <button>
+          JPOP
+        </button>
+        <button>
+          KPOP
+        </button>
+        <button>
+          Esports
+        </button>
+      </section>
+      <section class="gridLayout">
+        <div class="video">
+          <div class="thumbnailRow">
+            <img
+              class="thumbnail"
+              src="resources/Thumbnail 1.avif"
+              alt="File is not found"
+            />
+            <div class="videoDuration">15:04</div>
+          </div>
+
+          <div class="profile-picture">
+            <img
+              class="channel-profile-picture"
+              src="resources/channels4_profile.jpg"
+              alt=""
+            />
+          </div>
+          <div class="video-description">
+            <p class="video-title">This is how Discord Dies...</p>
+            <p class="video-author">No Text To Speech</p>
+            <p class="video-stats">175K views &#183; 4 hours ago</p>
+          </div>
+          
+        </div>
+        <div class="video">
+          <div class="thumbnailRow">
+            <img
+            class="thumbnail"
+            src="resources/Thumbnail 2.avif"
+            alt="File is not found"
+            />
+            <div class="videoDuration">20:24</div>
+          </div>
+            
+          <div class="profile-picture">
+            <img
+              class="channel-profile-picture"
+              src="resources/channels4_profile (1).jpg"
+              alt=""
+            />
+          </div>
+          <div class="video-description">
+            <p class="video-title">Carney vs Poilievre: Election 2025</p>
+            <p class="video-author">2 and 20</p>
+            <p class="video-stats">132K views &#183; 2 weeks ago</p>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnailRow">
+            <img
+            class="thumbnail"
+            src="resources/Thumbnail 3.avif"
+            alt="File is not found"
+            />
+            <div class="videoDuration">08:24</div>
+          </div>
+          <div class="profile-picture">
+            <img
+              class="channel-profile-picture"
+              src="resources/unnamed.jpg"
+              alt=""
+            />
+          </div>
+          <div class="video-description">
+            <p class="video-title">Vibe Coding Is The Future</p>
+            <p class="video-author">ThePrimeTime</p>
+            <p class="video-stats">544K views &#183; 1 months ago</p>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnailRow">
+            <img
+            class="thumbnail"
+            src="resources/Thumbnail 4.avif"
+            alt="File is not found"
+            />
+            <div class="videoDuration">18:32</div>
+          </div>
+          <div class="profile-picture">
+            <img
+              class="channel-profile-picture"
+              src="resources/channels4_profile (2).jpg"
+              alt=""
+            />
+          </div>
+          <div class="video-description">
+            <p class="video-title">I made her Upgrade her Husband's PC</p>
+            <p class="video-author">Linus Tech Tips</p>
+            <p class="video-stats">1.4M views &#183; 2 years ago</p>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnailRow">
+            <img
+            class="thumbnail"
+            src="resources/hq720(6).jpg"
+            alt="File is not found"
+            />
+            <div class="videoDuration">13:22</div>
+          </div>
+          <div class="profile-picture">
+            <img
+              class="channel-profile-picture"
+              src="resources/disguised toast.jpg"
+              alt=""
+            />
+          </div>
+          <div class="video-description">
+            <p class="video-title">I hosted a neww $100,000 Hide & Seek tournament</p>
+            <p class="video-author">Disguised Toast</p>
+            <p class="video-stats">2M views &#183; 2 years ago</p>
+          </div>
+        </div>
+        <div class="video">
+          <div class="thumbnailRow">
+            <img
+            class="thumbnail"
+            src="resources/Thumbnail 6.avif"
+            alt="File is not found"
+            />
+            <div class="videoDuration">13:22</div>
+          </div>
+          <div class="videoMeta">
+
+            <div class="profile-picture">
+              <img
+              class="channel-profile-picture"
+              src="resources/channels4_profile (4).jpg"
+              alt=""
+              />
+            </div>
+            <div class="video-description">
+              <p class="video-title">researcher figures out how to duplicate ticketmaster tickets</p>
+              <p class="video-author">Low Level</p>
+              <p class="video-stats">130K views &#183; 3 days ago</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function toggleDarkMode() {
+         var element = document.body;
+         element.classList.toggle("darkMode");
+
+        //  var logo = document.getElementById("logo");
+        //  if()
+          // logo.src = window.matchMedia("(prefers-color-scheme: dark)") ? ("resources/Youtube Logo Dark.png") : "resources/Youtube Logo.png";
+        // else
+        //   logo.src = "resources/Youtube Logo.png";
+      }
+      </script>
+  </body>
+</html>

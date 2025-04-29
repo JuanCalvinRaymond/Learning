@@ -1,0 +1,14 @@
+[
+{
+  "directory": "G:/GitHub/Learning/C++/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DRESOURCES_PATH=\\\"G:/GitHub/Learning/C++/resources/\\\" @CMakeFiles/HelloWorld.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\HelloWorld.dir\\src\\Print.cpp.obj -c G:\\GitHub\\Learning\\C++\\src\\Print.cpp",
+  "file": "G:/GitHub/Learning/C++/src/Print.cpp",
+  "output": "CMakeFiles/HelloWorld.dir/src/Print.cpp.obj"
+},
+{
+  "directory": "G:/GitHub/Learning/C++/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DRESOURCES_PATH=\\\"G:/GitHub/Learning/C++/resources/\\\" @CMakeFiles/HelloWorld.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\HelloWorld.dir\\src\\main.cpp.obj -c G:\\GitHub\\Learning\\C++\\src\\main.cpp",
+  "file": "G:/GitHub/Learning/C++/src/main.cpp",
+  "output": "CMakeFiles/HelloWorld.dir/src/main.cpp.obj"
+}
+]

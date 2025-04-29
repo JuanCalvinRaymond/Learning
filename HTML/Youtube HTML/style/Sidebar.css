@@ -1,0 +1,69 @@
+.sidebar button:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.sidebar {
+    position: fixed;
+    display: block;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    touch-action: pan-y;
+    
+    padding-inline: 12px;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    /* white-space: nowrap; */
+}
+
+.sidebar:hover {
+    scrollbar-color: grey transparent;
+}
+.guideSection {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid;
+}
+.sidebar button {
+    display: flex;
+    flex: 1; 
+    padding-block: 0;
+    align-items: center;
+    min-height: 40px;
+    border: 0;
+    border-radius: 10px;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.sidebarIcon{
+    height: 24px;
+    margin-right: 24px;
+}
+
+.collapsibleSection {
+    margin-top: 12px;
+    border-top: 1px solid;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerText {
+    padding: 0;
+    margin-right: 8px;
+}
+.headerButton {
+    font-size: 16px;
+}
+
+.subscription {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
