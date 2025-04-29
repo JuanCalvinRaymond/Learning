@@ -1,11 +1,12 @@
 :root {
-    /* color-scheme: light dark; */
+    color-scheme: light dark;
 }
 
 body {
     margin: 0;
     font-family: Roboto, Arial;
     color-scheme: light;
+    background-color: white;
     background-color: light-dark(white, #0f0f0f);
     color: light-dark(black, white);
     --button-background-color: light-dark(rgba(0, 0, 0, 0.05), rgb(40, 40, 40));
@@ -14,7 +15,7 @@ body {
     --button-select-color: light-dark(white, black);
 }
 
-.darkMode {
+.dark-mode {
     color-scheme: dark;
 }
 
@@ -83,4 +84,5 @@ body {
     .gridLayout {
         grid-template-columns: 1fr 1fr 1fr;
     }
-} 
+}
+
