@@ -1,0 +1,34 @@
+:root {
+    color-scheme: light dark;
+    --azure-radiance: #00A9FF;
+    --french-pass: #CDF5FD;
+    --jordy-blue: #89CFF3;
+    --anakiwa: #b9cff3;
+
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, Arial;
+    color-scheme: light;
+    background-color: light-dark(#53BFF5, #0f0f0f);
+    color: light-dark(white, white);
+    --button-icon-color: light-dark(var(--anakiwa), white);
+    --button-background-color: light-dark(var(--jordy-blue), rgb(40, 40, 40));
+    --button-background-hover-color: light-dark(var(--french-pass), rgba(60, 60, 60));
+    --button-background-select-color: light-dark(rgba(15, 15, 15), rgba(196, 196, 196));
+    --button-select-color: light-dark(white, black);}
+
+.dark-mode {
+    color-scheme: dark;
+}
+
+.title {
+    padding-top: 80px;
+    margin-top: 0;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}

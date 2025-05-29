@@ -1,0 +1,77 @@
+.sidebar button:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    width: 0px;
+    touch-action: pan-y;
+    
+    /* padding-inline: 10px; */
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--azure-radiance);
+
+    transition: width 0.5s cubic-bezier(0.5, 0, 0, 1)
+    /* white-space: nowrap; */
+}
+
+.sidebar:hover {
+    scrollbar-color: grey transparent;
+}
+/* .guideSection {
+    
+} */
+.sidebar button {
+    display: flex;
+    background-color: lightblue;
+    /* flex: 1; */
+    padding-block: 0;
+    padding-left: 10px;
+    align-items: center;
+    font-size: large;
+    min-height: 40px;
+    border: 0;
+    border-radius: 10px;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.sidebarIcon{
+    height: 24px;
+    margin-right: 24px;
+}
+
+.collapsibleSection {
+    margin-top: 12px;
+    border-top: 1px solid;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerText {
+    padding: 0;
+    margin-right: 8px;
+}
+.headerButton {
+    font-size: 16px;
+}
+
+.subscription {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}

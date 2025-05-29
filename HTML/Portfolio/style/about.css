@@ -1,0 +1,50 @@
+.body {
+    background-color: pink;
+}
+
+.profile {
+    background-color: var(--french-pass);
+    border-radius: 20px;
+    padding: 20px;
+    padding-top: 80px;
+    position: relative;
+    height: 350px;
+}
+
+.column {
+    display: flex;
+    padding-inline: 20px;
+    align-items: center;
+    color: var(--azure-radiance);
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    color: var(--azure-radiance);
+}
+
+.name {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--azure-radiance);
+    border-radius: 20px 20px 0px 0px;
+}
+.photo {
+    opacity: 0;
+    transition: 0.5s;
+    margin-right: 50px;
+    border-radius: 50%;
+    width: 300px;
+    border-color: var(--button-background-color);
+}
+.headline {
+    position: static;
+    flex: 1;
+    font-size: larger;
+}

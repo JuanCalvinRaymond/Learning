@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+	<title>Zim Corp</title>
+	<style>
+		.s0 { fill: none;stroke: #4f08a8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 28 } 
+		.s1 { fill: none;stroke: #ff0000;stroke-linecap: round;stroke-linejoin: round;stroke-width: 28 } 
+	</style>
+	<path id="Color Fill 2" class="s0" d="m100 143.3v-56.8m0-28.5m4-2"/>
+	<path id="Shape 1" class="s0" d="m100 58v-0.1"/>
+	<path id="Color Fill 1" class="s1" d="m14 86.3l57.7-0.3-57 57 55.7-1.1m29.6 1.4m2-86.3m27.1 28.7l0.4 57.2m27.4-56.4l0.4 56.8m27.4-57.2l-1.2 57.2"/>
+</svg>

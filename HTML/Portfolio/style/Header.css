@@ -1,0 +1,151 @@
+.themeButton:hover,
+.hamburger:hover,
+.logo:hover,
+.searchButton:hover,
+.voiceButton:hover,
+.createButton:hover,
+.notificationButton:hover,
+.profileButton:hover {
+    cursor: pointer;
+}
+
+.themeButton:hover,
+.hamburger:hover,
+.voiceButton:hover,
+.createButton:hover,
+.notificationButton:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.header {
+    background-color: var(--azure-radiance);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 16px;
+    height: 56px;
+}
+
+.left {
+    display: flex;
+    width: 200px;
+    align-items: center;
+}
+
+.hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0px;
+    padding: 3px;
+    color: var(--button-icon-color);
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.middle {
+    margin-left: 40px;
+    padding-inline: 4px;
+    display: flex;
+    flex: 0 1 732px;
+    align-items: center;
+    min-width: 0;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 225px;
+}
+
+.themeIcon {
+    width: 36px;
+}
+
+.headerButton {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 24px;
+    cursor: pointer;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.notificationButton {
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1)
+}
+
+.voiceButton,
+.notificationButton {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.notificationNumber {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-color: white;
+    align-items: center;
+    justify-content: center;
+}
+.profileButton {
+    display: flex;
+    align-items: center;
+    padding-block: 1px;
+    height: 34px;
+    width: 60px;
+    background-color: transparent;
+    border: 0;
+}
+
+.userProfileImage {
+    border-radius: 50%;
+    margin-inline: 8px;
+    height: 32px;
+}
+
+.header .tooltip{
+    position: absolute;
+    white-space: nowrap;
+    border-radius: 5px;
+    padding: 10px;
+    top: 56px;
+    color: white;
+    background-color: rgb(170, 170, 170);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.voiceButton:hover .tooltip,
+.notificationButton:hover .tooltip {
+    opacity: 1;
+} 
+
+.contacts {
+    margin-right: 16px;
+}

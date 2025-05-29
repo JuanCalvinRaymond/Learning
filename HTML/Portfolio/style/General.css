@@ -1,0 +1,85 @@
+.verticalLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: 300px;
+    margin-top: 100px;
+    height: 100%;
+}
+
+.background {
+    margin-top: -100px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -2;
+}
+
+.horizontalLayout {
+    display: flex;
+    justify-content:flex-start;
+    padding: 0;
+    padding-inline: 24px;
+}
+
+.horizontalLayout button {
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 13px;
+    margin-left: 0px;
+    border:0;
+    border-radius: 8px;
+    background-color: var(--button-background-color);
+    padding-inline: 15px;
+    height: 35px;
+    color: inherit;
+    white-space: nowrap;
+    touch-action: pan-y;
+    cursor: pointer;
+    transition: background-color 0.5s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.horizontalLayout button:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.horizontalLayout .buttonSelected {
+    color: var(--button-select-color);
+    background-color: var(--button-background-select-color);
+}
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 24px;
+    padding-inline: 16px;
+}
+.video {
+    margin-left: 8px;
+    margin-bottom: 32px;
+    margin-right: 8px;
+}
+
+@media (max-width: 1199px) {
+    .gridLayout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gridLayout {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--button-background-color);
+    color: var(--button-select-color);
+}
