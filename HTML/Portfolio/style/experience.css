@@ -66,9 +66,9 @@ body {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid var(--jordy-blue);
+  border: medium solid black;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent var(--jordy-blue);
+  border-color: transparent transparent transparent black;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -80,9 +80,9 @@ body {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
+  border: medium solid black;
   border-width: 10px 10px 10px 0;
-  border-color: transparent var(--jordy-blue) transparent transparent;
+  border-color: transparent black transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */

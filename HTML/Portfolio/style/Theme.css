@@ -12,7 +12,7 @@ body {
     font-family: Roboto, Arial;
     color-scheme: light;
     background-color: light-dark(#53BFF5, #0f0f0f);
-    color: light-dark(white, white);
+    color: light-dark(black, black);
     --button-icon-color: light-dark(var(--anakiwa), white);
     --button-background-color: light-dark(var(--jordy-blue), rgb(40, 40, 40));
     --button-background-hover-color: light-dark(var(--french-pass), rgba(60, 60, 60));

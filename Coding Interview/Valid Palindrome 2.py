@@ -1,4 +1,4 @@
- Python program to check whether it is possible to make
+# Python program to check whether it is possible to make
 # string palindrome by removing one character
 
 # Utility method to check if substring from 
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
     if idx == -1:
         print("Not possible")
-    else if idx == -2:
+    elif idx == -2:
         print("Possible without removing any character")
     else:
         print("Possible by removing character at index", idx)

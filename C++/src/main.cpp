@@ -1,39 +1,67 @@
+// #include <iostream>
+// // #include "Print.H"
+// #include <string>
+
+// struct Entity
+// {
+//     // public
+//     static int a;
+//     int b = 5;
+
+//     void Print()
+//     {
+//         static int c = 2;
+//         int d = 3;
+//         c++;
+//         d++;
+//         std::cout << "c: " << c << ", d: " << d << std::endl;
+//     }
+// };
+
+// int Entity::a = 0;
+// int main()
+// {
+//     Entity entity = Entity();
+
+//     entity.Print();
+//     entity.Print();
+//     entity.Print();
+//     entity.Print();
+//     entity.Print();
+//     return 0;
+// }
+
 #include <iostream>
-#include "Print.H"
-#include <string>
+#include <mutex>
+#include <thread>
 
-class Entity
-{
-    // public:
-    int a = 5;
+// std::mutex mtx;
 
-public:
-    virtual int GetA()
-    {
-        return a;
-    }
-};
-
-class Person : public Entity
-{
-    int a = 7;
-
-    // public:
-    //     virtual int GetA() override
-    //     {
-    //         return a;
-    //     }
-};
+// void print_block(int n, char c)
+// {
+//     {
+//         std::unique_lock<std::mutex> locker(mtx);
+//         for (int i = 0; i < n; ++i)
+//         {
+//             std::cout << c;
+//         }
+//         std::cout << '\n';
+//     }
+// }
 
 int main()
 {
-    Entity entity;
-    Person person;
+    // std::thread t1(print_block, 50, '*');
+    // std::thread t2(print_block, 50, '$');
 
-    std::cout << entity.GetA() << std::endl;
-    std::cout << person.GetA() << std::endl;
-    // std::string string = "Hello";
-    // Log(string);
+    // t1.join();
+    // t2.join();
+    int a = 0;
+    if (a == 0)
+    {
+        a = 1;
+    }
 
+    std::cout << a << std::endl;
     return 0;
 }
